@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<!-- 
+	mapper：映射
+	namespace：接口路径
+ -->
+<mapper namespace="com.turing.mybaits.mapper.StaffMapper">
+	<!-- 
+		select：查询语句
+		resultType:实体类对象路径
+		#{id}：传递进来的参数，类似于以前的占位符?
+		id:接口中的方法名
+	 -->
+	<select id="getstaById" resultType="com.turing.mybaits.entity.Staff">
+		select * from staff where id = #{id}
+	</select>
+</mapper>
